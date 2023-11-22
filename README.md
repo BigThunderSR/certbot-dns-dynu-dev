@@ -1,4 +1,4 @@
-certbot-dns-dynu
+certbot-dns-dynu-dev
 ============
 
 Dynu DNS Authenticator plugin for [Certbot](https://certbot.eff.org/).
@@ -12,7 +12,7 @@ Installation
 
 ```
 pip install --upgrade certbot
-pip install certbot-dns-dynu
+pip install certbot-dns-dynu-dev
 ```
 
 Verify:
@@ -25,7 +25,7 @@ $ certbot plugins --text
 Description: Obtain certificates using a DNS TXT record (if you are using Dynu
 for DNS.)
 Interfaces: Authenticator, Plugin
-Entry point: dns-dynu = certbot_dns_dynu.dns_dynu:Authenticator
+Entry point: dns-dynu = certbot_dns_dynu_dev.dns_dynu:Authenticator
 
 ...
 ...
