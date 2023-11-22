@@ -1,4 +1,4 @@
-"""Tests for certbot_dns_dynu.dns_dynu"""
+"""Tests for certbot_dns_dynu_dev.dns_dynu"""
 
 import os
 import unittest
@@ -21,7 +21,7 @@ class AuthenticatorTest(test_util.TempDirTestCase,
     def setUp(self):
         super(AuthenticatorTest, self).setUp()
 
-        from certbot_dns_dynu.dns_dynu import Authenticator
+        from certbot_dns_dynu_dev.dns_dynu import Authenticator
 
         path = os.path.join(self.tempdir, 'file.ini')
         dns_test_common.write(
@@ -51,7 +51,7 @@ class DynuLexiconClientTest(unittest.TestCase,
     LOGIN_ERROR = HTTPError('401 Client Error: Unauthorized')
 
     def setUp(self):
-        from certbot_dns_dynu.dns_dynu import _DynuLexiconClient
+        from certbot_dns_dynu_dev.dns_dynu import _DynuLexiconClient
 
         self.client = _DynuLexiconClient(auth_token=AUTH_TOKEN, ttl=0)
 
