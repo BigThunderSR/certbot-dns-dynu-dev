@@ -7,7 +7,7 @@ This plugin is built from the ground up and follows the development style and li
 of other `certbot-dns-*` plugins found in the
 [Official Certbot Repository](https://github.com/certbot/certbot).
 
-This fork was created since https://github.com/bikram990/certbot-dns-dynu/pull/7 is not being merged in the upstream project by the original author.
+This fork was created since <https://github.com/bikram990/certbot-dns-dynu/pull/7> is not being merged in the upstream project by the original author.
 
 Installation
 ------------
@@ -45,7 +45,6 @@ dns_dynu_auth_token = AbCbASsd!@34
 Usage
 -----
 
-
 ```
 certbot ... \
         --authenticator dns-dynu  \
@@ -66,10 +65,10 @@ This is a limitation of the Certbot interface towards _third-party_ plugins.
 
 For details read the discussions:
 
-- https://github.com/certbot/certbot/issues/6504#issuecomment-473462138
-- https://github.com/certbot/certbot/issues/6040
-- https://github.com/certbot/certbot/issues/4351
-- https://github.com/certbot/certbot/pull/6372
+- <https://github.com/certbot/certbot/issues/6504#issuecomment-473462138>
+- <https://github.com/certbot/certbot/issues/6040>
+- <https://github.com/certbot/certbot/issues/4351>
+- <https://github.com/certbot/certbot/pull/6372>
 
 Development
 -----------
@@ -92,6 +91,7 @@ Copyright (c) 2021 [Bikramjeet Singh](https://github.com/bikram990)
 
 Credits
 --------
+
 [PowerDNS](https://github.com/pan-net-security/certbot-dns-powerdns)
 
 [dns-lexicon](https://github.com/AnalogJ/lexicon)
@@ -106,9 +106,3 @@ Helpful links
 [dynu with acme.sh](https://gist.github.com/tavinus/15ea64c50ac5fb7cea918e7786c94a95)
 
 [dynu api](https://www.dynu.com/Support/API)
-
-
-
-
-
-
