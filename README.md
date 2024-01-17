@@ -7,6 +7,8 @@ This plugin is built from the ground up and follows the development style and li
 of other `certbot-dns-*` plugins found in the
 [Official Certbot Repository](https://github.com/certbot/certbot).
 
+This fork was created since https://github.com/bikram990/certbot-dns-dynu/pull/7 is not being merged in the upstream project by the original author.
+
 Installation
 ------------
 
