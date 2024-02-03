@@ -88,6 +88,7 @@ License
 --------
 
 Copyright (c) 2021 [Bikramjeet Singh](https://github.com/bikram990)
+
 Copyright ©️ 2023 - 2024 [BigThunderSR](https://github.com/BigThunderSR)
 
 Credits
