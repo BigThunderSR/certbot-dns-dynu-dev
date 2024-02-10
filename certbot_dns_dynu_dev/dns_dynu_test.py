@@ -17,6 +17,7 @@ AUTH_TOKEN = '00000000-0000-0000-0000-000000000000'
 
 class AuthenticatorTest(test_util.TempDirTestCase,
                         dns_test_common_lexicon.BaseLexiconAuthenticatorTest):
+    """DNS Authenticator Test for Dynu."""
 
     def setUp(self):
         super(AuthenticatorTest, self).setUp()
@@ -46,6 +47,7 @@ class AuthenticatorTest(test_util.TempDirTestCase,
 
 class DynuLexiconClientTest(unittest.TestCase,
                             dns_test_common_lexicon.BaseLexiconClientTest):
+    """Lexicon Client Test for Dynu."""
     DOMAIN_NOT_FOUND = HTTPError('422 Client Error: Unprocessable Entity for url: {0}.'
                                  .format(DOMAIN))
     LOGIN_ERROR = HTTPError('401 Client Error: Unauthorized')

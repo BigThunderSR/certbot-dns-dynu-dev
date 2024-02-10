@@ -1,9 +1,11 @@
 #! /usr/bin/env python
+"""Test for DNS Authenticator for Dynu"""
+
 from os import path
 from setuptools import setup
 from setuptools import find_packages
 
-version = "0.0.5"
+VERSION = "0.0.5"
 
 with open('README.md') as f:
     long_description = f.read()
@@ -22,14 +24,14 @@ here = path.abspath(path.dirname(__file__))
 
 setup(
     name='certbot-dns-dynu-dev',
-    version=version,
+    version=VERSION,
 
     description="Dynu DNS Authenticator plugin for Certbot",
     long_description=long_description,
     long_description_content_type='text/markdown',
     url='https://github.com/BigThunderSR/certbot-dns-dynu-dev',
     download_url='https://github.com/BigThunderSR/certbot-dns-dynu-dev/archive/refs/tags/'
-                + version + '.tar.gz',
+                + VERSION + '.tar.gz',
     author="Bikramjeet Sing, updated by BigThunderSR",
     license='Apache License 2.0',
     python_requires='>=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*',
@@ -46,6 +48,9 @@ setup(
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
+        'Programming Language :: Python :: 3.11',
         'Topic :: Internet :: WWW/HTTP',
         'Topic :: Security',
         'Topic :: System :: Installation/Setup',

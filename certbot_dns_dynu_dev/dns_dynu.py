@@ -28,7 +28,7 @@ class Authenticator(dns_common.DNSAuthenticator):
     @classmethod
     def add_parser_arguments(cls, add):
         super(Authenticator, cls).add_parser_arguments(
-            add, default_propagation_seconds=60)
+              add, default_propagation_seconds=60)
         add("credentials", help="Dynu credentials file.")
 
     def more_info(self):  # pylint: disable=missing-docstring,no-self-use
@@ -63,9 +63,7 @@ class Authenticator(dns_common.DNSAuthenticator):
 
 
 class _DynuLexiconClient(dns_common_lexicon.LexiconClient):
-    """
-    Encapsulates all communication with the Dynu via Lexicon.
-    """
+    """Encapsulates all communication with Dynu via Lexicon."""
 
     def __init__(self, auth_token, ttl):
         super(_DynuLexiconClient, self).__init__()
