@@ -43,9 +43,11 @@ class AuthenticatorTest(test_util.TempDirTestCase,
         # _get_dynu_client | pylint: disable=protected-access
         self.auth._get_dynu_client = mock.MagicMock(return_value=self.mock_client)
 
+
 class DynuLexiconClientTest(unittest.TestCase,
-                                dns_test_common_lexicon.BaseLexiconClientTest):
-    DOMAIN_NOT_FOUND = HTTPError('422 Client Error: Unprocessable Entity for url: {0}.'.format(DOMAIN))
+                            dns_test_common_lexicon.BaseLexiconClientTest):
+    DOMAIN_NOT_FOUND = HTTPError('422 Client Error: Unprocessable Entity for url: {0}.'
+                                 .format(DOMAIN))
     LOGIN_ERROR = HTTPError('401 Client Error: Unauthorized')
 
     def setUp(self):
