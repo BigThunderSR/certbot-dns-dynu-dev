@@ -42,5 +42,5 @@ jobs:
       run: |
         #pytest --cov=/certbot-dns-dynu-dev certbot_dns_dynu_dev/dns_dynu_test.py
         coverage xml -o coverage.xml pytest certbot_dns_dynu_dev/dns_dynu_test.py
-        #bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r coverage.xml --project-token ${{ secrets.CODACY_PROJECT_TOKEN }}
-        bash <(curl -Ls https://coverage.codacy.com/get.sh) report --project-token ${{ secrets.CODACY_PROJECT_TOKEN }}
+        bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r coverage.xml --project-token ${{ secrets.CODACY_PROJECT_TOKEN }}
+        #bash <(curl -Ls https://coverage.codacy.com/get.sh) report --project-token ${{ secrets.CODACY_PROJECT_TOKEN }}
