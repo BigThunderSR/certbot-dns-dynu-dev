@@ -11,7 +11,7 @@ with open('README.md') as f:
 install_requires = [
     'acme>=2.0.0',
     'certbot>=2.0.0',
-    'dns-lexicon>=3.11.7',    
+    'dns-lexicon>=3.11.7',
     'dnspython',
     'mock',
     'setuptools',
@@ -28,7 +28,8 @@ setup(
     long_description=long_description,
     long_description_content_type='text/markdown',
     url='https://github.com/BigThunderSR/certbot-dns-dynu-dev',
-    download_url='https://github.com/BigThunderSR/certbot-dns-dynu-dev/archive/refs/tags/' + version +'.tar.gz',
+    download_url='https://github.com/BigThunderSR/certbot-dns-dynu-dev/archive/refs/tags/'
+                + version + '.tar.gz',
     author="Bikramjeet Sing, updated by BigThunderSR",
     license='Apache License 2.0',
     python_requires='>=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*',
