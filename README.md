@@ -9,6 +9,8 @@ of other `certbot-dns-*` plugins found in the
 
 This fork was created since <https://github.com/bikram990/certbot-dns-dynu/pull/7> is not being merged in the upstream project by the original author.
 
+This fork is also being used in the Home Assistant Let's Encrypt add-on via https://github.com/home-assistant/addons/pull/3556
+
 Installation
 ------------
 
