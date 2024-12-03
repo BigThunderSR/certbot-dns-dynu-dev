@@ -13,11 +13,13 @@ with open('README.md') as f:
 install_requires = [
     'acme>=2.0.0',
     'certbot>=2.0.0',
+    'dns-lexicon>=3.11.7',
     'dnspython',
     'mock',
     'setuptools',
     'requests'
 ]
+
 
 here = path.abspath(path.dirname(__file__))
 
