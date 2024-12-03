@@ -13,7 +13,6 @@ with open('README.md') as f:
 install_requires = [
     'acme>=2.0.0',
     'certbot>=2.0.0',
-    'tldextract==5.1.2; python_version == "3.8"',
     'dnspython',
     'mock',
     'setuptools',
