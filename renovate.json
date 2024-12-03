@@ -1,40 +1,68 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:recommended"
-  ],
-  "labels": [
-    "Renovate",
-    "dependencies"
-  ],
-  "packageRules": [
-    { 
-     "matchManagers": ["npm"],
-     "addLabels": ["javascript"]
-    },
-    {
-     "matchLanguages":["js"],
-     "addLabels": ["javascript"]
-    },
-    {
-     "matchLanguages":["python"],
-     "addLabels": ["python"]
-    },
-    {
-     "matchManagers": ["github-actions"],
-     "addLabels": ["github_actions"]
-    },
-    {
-     "matchManagers": ["dockerfile"],
-     "addLabels": ["dockerfile"]
-    },
-    {
-     "matchPackagePatterns": ["dockerfile"],
-     "addLabels": ["dockerfile"]
-    },
-    {
-     "matchManagers": ["nvm"],
-     "addLabels": ["nvm"] 
-    }  
-  ]
+ "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+ "extends": [
+  "config:recommended"
+ ],
+ "labels": [
+  "Renovate",
+  "dependencies"
+ ],
+ "packageRules": [
+  {
+   "matchManagers": [
+    "npm"
+   ],
+   "addLabels": [
+    "javascript"
+   ]
+  },
+  {
+   "matchCategories": [
+    "js"
+   ],
+   "addLabels": [
+    "javascript"
+   ]
+  },
+  {
+   "matchCategories": [
+    "python"
+   ],
+   "addLabels": [
+    "python"
+   ]
+  },
+  {
+   "matchManagers": [
+    "github-actions"
+   ],
+   "addLabels": [
+    "github_actions"
+   ]
+  },
+  {
+   "matchManagers": [
+    "dockerfile"
+   ],
+   "addLabels": [
+    "dockerfile"
+   ]
+  },
+  {
+   "addLabels": [
+    "dockerfile"
+   ],
+   "matchPackageNames": [
+    "/dockerfile/"
+   ]
+  },
+  {
+   "matchManagers": [
+    "nvm"
+   ],
+   "addLabels": [
+    "nvm"
+   ]
+  }
+ ]
 }
