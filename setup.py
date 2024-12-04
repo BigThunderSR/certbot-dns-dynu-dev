@@ -14,7 +14,7 @@ install_requires = [
     'acme>=2.0.0',
     'certbot>=2.0.0',
     'dns-lexicon>=3.11.7',
-    'tldextract==5.1.2; python_version == "3.8"',
+    'tldextract==5.1.3; python_version == "3.8"',
     'dnspython',
     'mock',
     'setuptools',
