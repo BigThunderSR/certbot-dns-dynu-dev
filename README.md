@@ -74,7 +74,7 @@ spawn the environment and run the test:
 virtualenv -p python3 .venv
 source .venv/bin/activate
 pip install -e .
-./test/run_certonly.sh test/dynu-credentials.ini
+python ./certbot_dns_dynu_dev/dns_dynu_test.py
 ```
 
 ## License
