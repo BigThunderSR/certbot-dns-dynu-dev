@@ -32,7 +32,7 @@ class AuthenticatorTest(test_util.TempDirTestCase,
 
         print("File content: ")
         # print(open(path).read())
-        with open(path) as f:
+        with open(path, encoding='utf-8') as f:
             print(f.read())
 
         self.config = mock.MagicMock(dynu_credentials=path,
