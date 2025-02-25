@@ -2,8 +2,8 @@
 
 import logging
 
-from certbot import interfaces
-from certbot import errors
+# from certbot import interfaces
+# from certbot import errors
 
 from certbot.plugins import dns_common
 from certbot.plugins import dns_common_lexicon
