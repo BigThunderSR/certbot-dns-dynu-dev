@@ -2,8 +2,8 @@
 
 import logging
 
-from certbot import interfaces
-from certbot import errors
+# from certbot import interfaces
+# from certbot import errors
 
 from certbot.plugins import dns_common
 from certbot.plugins import dns_common_lexicon
@@ -16,8 +16,7 @@ logger = logging.getLogger(__name__)
 class Authenticator(dns_common.DNSAuthenticator):
     """DNS Authenticator for Dynu."""
 
-    description = 'Obtain certificates using a DNS TXT record ' + \
-                  '(if you are using Dynu for DNS.)'
+    description = 'Obtain certificates using a DNS TXT record with Dynu DNS.'
 
     ttl = 60
 
