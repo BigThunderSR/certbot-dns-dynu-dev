@@ -6,7 +6,7 @@
 
 # certbot-dns-dynu-dev
 
-Dynu DNS Authenticator plugin for [Certbot](https://certbot.eff.org/).
+Updated Dynu DNS Authenticator plugin for [Certbot](https://certbot.eff.org/).
 
 This plugin is built from the ground up and follows the development style and life-cycle
 of other `certbot-dns-*` plugins found in the
