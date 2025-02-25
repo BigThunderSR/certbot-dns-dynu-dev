@@ -1,4 +1,4 @@
-"""DNS Authenticator for Dynu."""
+"""Updated DNS Authenticator for Dynu."""
 
 import logging
 
