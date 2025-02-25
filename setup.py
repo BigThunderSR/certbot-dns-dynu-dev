@@ -5,15 +5,15 @@ from os import path
 from setuptools import setup
 from setuptools import find_packages
 
-VERSION = "0.0.6"
+VERSION = "0.0.7"
 
 with open('README.md', 'r', encoding='utf-8') as f:
     long_description = f.read()
 
 install_requires = [
-    'acme>=2.0.0',
-    'certbot>=2.0.0',
-    'dns-lexicon>=3.11.7',
+    'acme',
+    'certbot',
+    'dns-lexicon',
     'tldextract',
     'dnspython',
     'mock',
