@@ -24,7 +24,6 @@ certbot plugins --text
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 * dns-dynu
-Description: Obtain certificates using a DNS TXT record (if you are using Dynu for DNS.)
 Description: Obtain certificates using a DNS TXT record with Dynu DNS.
 Entry point: dns-dynu = certbot_dns_dynu_dev.dns_dynu:Authenticator
 
