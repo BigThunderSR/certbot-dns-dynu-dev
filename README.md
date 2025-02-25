@@ -74,7 +74,6 @@ spawn the environment and run the test:
 virtualenv -p python3 .venv
 source .venv/bin/activate
 pip install -e .
-docker-compose up -d
 ./test/run_certonly.sh test/dynu-credentials.ini
 ```
 
