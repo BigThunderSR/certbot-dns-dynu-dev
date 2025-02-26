@@ -1,10 +1,10 @@
+# certbot-dns-dynu-dev
+
 [![CodeQL](https://github.com/BigThunderSR/certbot-dns-dynu-dev/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/BigThunderSR/certbot-dns-dynu-dev/actions/workflows/github-code-scanning/codeql)
 [![Dependabot Updates](https://github.com/BigThunderSR/certbot-dns-dynu-dev/actions/workflows/dependabot/dependabot-updates/badge.svg)](https://github.com/BigThunderSR/certbot-dns-dynu-dev/actions/workflows/dependabot/dependabot-updates)
 [![Python Lint and Test](https://github.com/BigThunderSR/certbot-dns-dynu-dev/actions/workflows/python-lint-test.yml/badge.svg)](https://github.com/BigThunderSR/certbot-dns-dynu-dev/actions/workflows/python-lint-test.yml)
 [![Upload Python Package](https://github.com/BigThunderSR/certbot-dns-dynu-dev/actions/workflows/python-publish.yml/badge.svg)](https://github.com/BigThunderSR/certbot-dns-dynu-dev/actions/workflows/python-publish.yml)
 ![PyPI - Version](https://img.shields.io/pypi/v/certbot-dns-dynu-dev?style=plastic&labelColor=yellow&color=blue)
-
-# certbot-dns-dynu-dev
 
 Updated Dynu DNS Authenticator plugin for [Certbot](https://certbot.eff.org/).
 
