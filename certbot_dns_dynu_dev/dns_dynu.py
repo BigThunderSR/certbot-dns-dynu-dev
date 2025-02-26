@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 
 
 class Authenticator(dns_common.DNSAuthenticator):
-    """DNS Authenticator for Dynu."""
+    """Updated DNS Authenticator for Dynu."""
 
     description = 'Obtain certificates using a DNS TXT record with Dynu DNS.'
 

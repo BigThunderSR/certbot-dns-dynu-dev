@@ -28,13 +28,13 @@ setup(
     name='certbot-dns-dynu-dev',
     version=VERSION,
 
-    description="Dynu DNS Authenticator plugin for Certbot",
+    description="Updated Dynu DNS Authenticator plugin for Certbot",
     long_description=long_description,
     long_description_content_type='text/markdown',
     url='https://github.com/BigThunderSR/certbot-dns-dynu-dev',
     download_url='https://github.com/BigThunderSR/certbot-dns-dynu-dev/archive/refs/tags/'
                 + VERSION + '.tar.gz',
-    author="Bikramjeet Sing, updated by BigThunderSR",
+    author="Updated by BigThunderSR; original author Bikramjeet Sing,",
     license='Apache License 2.0',
     python_requires='>=3.9',
     classifiers=[
