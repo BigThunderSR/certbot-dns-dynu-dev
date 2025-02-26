@@ -11,13 +11,13 @@ with open('README.md', 'r', encoding='utf-8') as f:
     long_description = f.read()
 
 install_requires = [
-    'acme',
-    'certbot',
-    'dns-lexicon',
-    'tldextract',
+    'acme>3.0.0',
+    'certbot>3.0.0',
+    'dns-lexicon>3.0.0',
+    'tldextract>=5.0.0',
     'dnspython',
     'mock',
-    'setuptools',
+    'setuptools>=68.0.0',
     'requests'
 ]
 
@@ -28,13 +28,13 @@ setup(
     name='certbot-dns-dynu-dev',
     version=VERSION,
 
-    description="Dynu DNS Authenticator plugin for Certbot",
+    description="Updated Dynu DNS Authenticator plugin for Certbot",
     long_description=long_description,
     long_description_content_type='text/markdown',
     url='https://github.com/BigThunderSR/certbot-dns-dynu-dev',
     download_url='https://github.com/BigThunderSR/certbot-dns-dynu-dev/archive/refs/tags/'
                 + VERSION + '.tar.gz',
-    author="Bikramjeet Sing, updated by BigThunderSR",
+    author="Updated by BigThunderSR; original author Bikramjeet Sing,",
     license='Apache License 2.0',
     python_requires='>=3.9',
     classifiers=[
