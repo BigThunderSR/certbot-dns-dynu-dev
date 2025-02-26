@@ -85,9 +85,9 @@ python ./certbot_dns_dynu_dev/dns_dynu_test.py
 
 ## License
 
-Copyright (c) 2021 [Bikramjeet Singh](https://github.com/bikram990)
-
 Copyright ©️ 2023 - 2025 [BigThunderSR](https://github.com/BigThunderSR)
+
+Original Copyright (c) 2021 [Bikramjeet Singh](https://github.com/bikram990)
 
 ## Credits
 
