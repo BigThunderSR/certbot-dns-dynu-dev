@@ -8,7 +8,7 @@ import logging
 from certbot.plugins import dns_common
 from certbot.plugins import dns_common_lexicon
 
-from lexicon.providers import dynu
+from lexicon.providers import dynu # pylint: disable=no-name-in-module
 
 logger = logging.getLogger(__name__)
 
