@@ -11,13 +11,13 @@ with open('README.md', 'r', encoding='utf-8') as f:
     long_description = f.read()
 
 install_requires = [
-    'acme',
-    'certbot',
-    'dns-lexicon',
-    'tldextract',
+    'acme>3.0.0',
+    'certbot>3.0.0',
+    'dns-lexicon>3.0.0',
+    'tldextract>=5.0.0',
     'dnspython',
     'mock',
-    'setuptools',
+    'setuptools>=68.0.0',
     'requests'
 ]
 
