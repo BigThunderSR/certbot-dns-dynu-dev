@@ -25,7 +25,7 @@ class Authenticator(dns_common.DNSAuthenticator):
         self.credentials = None
 
     @classmethod
-    def add_parser_arguments(cls, add):
+    def add_parser_arguments(cls, add): # pylint: disable=arguments-differ  
         super(Authenticator, cls).add_parser_arguments(
               add, default_propagation_seconds=60)
         add("credentials", help="Dynu credentials file.")
