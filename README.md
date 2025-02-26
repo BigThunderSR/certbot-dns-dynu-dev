@@ -1,9 +1,9 @@
 # certbot-dns-dynu-dev
 
-[![CodeQL](https://github.com/BigThunderSR/certbot-dns-dynu-dev/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/BigThunderSR/certbot-dns-dynu-dev/actions/workflows/github-code-scanning/codeql)
-[![Dependabot Updates](https://github.com/BigThunderSR/certbot-dns-dynu-dev/actions/workflows/dependabot/dependabot-updates/badge.svg)](https://github.com/BigThunderSR/certbot-dns-dynu-dev/actions/workflows/dependabot/dependabot-updates)
-[![Python Lint and Test](https://github.com/BigThunderSR/certbot-dns-dynu-dev/actions/workflows/python-lint-test.yml/badge.svg)](https://github.com/BigThunderSR/certbot-dns-dynu-dev/actions/workflows/python-lint-test.yml)
-[![Upload Python Package](https://github.com/BigThunderSR/certbot-dns-dynu-dev/actions/workflows/python-publish.yml/badge.svg)](https://github.com/BigThunderSR/certbot-dns-dynu-dev/actions/workflows/python-publish.yml)
+[![CodeQL](https://github.com/BigThunderSR/certbot-dns-dynu-dev/actions/workflows/github-code-scanning/codeql/badge.svg?style=plastic)](https://github.com/BigThunderSR/certbot-dns-dynu-dev/actions/workflows/github-code-scanning/codeql)
+[![Dependabot Updates](https://github.com/BigThunderSR/certbot-dns-dynu-dev/actions/workflows/dependabot/dependabot-updates/badge.svg?style=plastic)](https://github.com/BigThunderSR/certbot-dns-dynu-dev/actions/workflows/dependabot/dependabot-updates)
+[![Python Lint and Test](https://github.com/BigThunderSR/certbot-dns-dynu-dev/actions/workflows/python-lint-test.yml/badge.svg?style=plastic)](https://github.com/BigThunderSR/certbot-dns-dynu-dev/actions/workflows/python-lint-test.yml)
+[![Upload Python Package](https://github.com/BigThunderSR/certbot-dns-dynu-dev/actions/workflows/python-publish.yml/badge.svg?style=plastic)](https://github.com/BigThunderSR/certbot-dns-dynu-dev/actions/workflows/python-publish.yml)
 [![PyPI - Version](https://img.shields.io/pypi/v/certbot-dns-dynu-dev?style=plastic&labelColor=yellow&color=blue)](https://pypi.org/project/certbot-dns-dynu-dev/)
 
 Updated Dynu DNS Authenticator plugin for [Certbot](https://certbot.eff.org/).
@@ -12,7 +12,7 @@ This plugin is built from the ground up and follows the development style and li
 of other `certbot-dns-*` plugins found in the
 [Official Certbot Repository](https://github.com/certbot/certbot).
 
-This fork was created because the pull request [Add support for Dynu DNS API](https://github.com/bikram990/certbot-dns-dynu/pull/7) was not being merged in the upstream project by the original author. It has since been merged in the upstream project, but this fork has been updated for currency and compatibility with the latest versions of Python and Certbot.
+This fork was created because the pull request [Add support for Dynu DNS API](https://github.com/bikram990/certbot-dns-dynu/pull/7) was not being merged in the upstream project by the original author. It has since been merged in the upstream project. However, this fork has been updated for currency and compatibility with the latest versions of Python and Certbot.
 
 This fork is also being used in the Home Assistant Let's Encrypt add-on via <https://github.com/home-assistant/addons/pull/3556>
 
@@ -48,6 +48,7 @@ dns_dynu_auth_token = AbCbASsd!@34
 ## Usage
 
 ```bash
+# Obtain a certificate using the Dynu DNS authenticator
 certbot ... \
         --authenticator dns-dynu  \
         --dns-dynu-credentials ~/dynu-credentials.ini \
@@ -73,8 +74,7 @@ For details read the discussions:
 
 ## Development
 
-Create a virtualenv, install the plugin (`editable` mode),
-spawn the environment and run the test:
+Create a virtualenv, install the plugin (`editable` mode), spawn the environment and run the test:
 
 ```bash
 virtualenv -p python3 .venv
