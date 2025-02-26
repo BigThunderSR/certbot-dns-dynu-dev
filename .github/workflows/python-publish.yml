@@ -32,15 +32,16 @@ jobs:
         pip install build
     - name: Build package
       run: python -m build
+    #- name: Publish package
+    #  uses: pypa/gh-action-pypi-publish@master
+    #  with:
+    #    attestations: true
+    #  env:
+    #    # Remove the explicit password input to enable Trusted Publishing
+    #    PYPI_TOKEN: ${{ secrets.PYPI_API_TOKEN }}
     - name: Publish package
-      uses: pypa/gh-action-pypi-publish@master
+      uses: pypa/gh-action-pypi-publish@db8f07d3871a0a180efa06b95d467625c19d5d5f
       with:
         attestations: true
-      env:
-        # Remove the explicit password input to enable Trusted Publishing
-        PYPI_TOKEN: ${{ secrets.PYPI_API_TOKEN }}
-    #- name: Publish package
-    #  uses: pypa/gh-action-pypi-publish@db8f07d3871a0a180efa06b95d467625c19d5d5f
-    #  with:
-    #    user: __token__
+        user: __token__
     #    password: ${{ secrets.PYPI_API_TOKEN }}
