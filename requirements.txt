@@ -1,0 +1,8 @@
+acme
+certbot
+dns-lexicon
+tldextract
+dnspython
+mock
+setuptools
+requests
