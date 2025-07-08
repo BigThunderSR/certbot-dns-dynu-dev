@@ -1,7 +1,7 @@
 #!/bin/bash
 # setup_venv_test_py38.sh - Script for testing with Python 3.8 (temporary workaround)
 
-set -e  # Exit on any error
+set -e # Exit on any error
 
 PROJECT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 VENV_DIR="$PROJECT_DIR/venv"
@@ -30,7 +30,7 @@ if [ ! -f "$VENV_DIR/bin/activate" ]; then
         rm -rf "$VENV_DIR"
     fi
     echo "📦 Creating virtual environment..."
-    
+
     # Try to install python3-venv if venv creation fails
     if ! python3 -m venv "$VENV_DIR" 2>/dev/null; then
         echo "❌ Failed to create virtual environment. Trying to install python3-venv..."
@@ -105,13 +105,13 @@ echo ""
 # Run basic tests if requested
 if [ "$1" = "--test" ]; then
     echo "🧪 Running basic tests..."
-    
+
     echo "Running local logic tests..."
     python test_local.py
-    
+
     echo "Running unit tests..."
     python certbot_dns_dynu_dev/dns_dynu_test.py || echo "Some unit tests failed (may be expected)"
-    
+
     echo "✅ Basic tests completed"
 fi
 

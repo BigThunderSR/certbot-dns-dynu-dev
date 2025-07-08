@@ -33,7 +33,7 @@ fi
 
 # Install the plugin in development mode
 echo "📦 Installing plugin in development mode..."
-if pip install -e . ; then
+if pip install -e .; then
     echo "✅ Plugin installed successfully"
 else
     echo "❌ Failed to install plugin"
@@ -56,7 +56,7 @@ echo ""
 
 # Run local logic tests
 echo "1. Running local logic tests..."
-if python test_local.py > /dev/null 2>&1; then
+if python test_local.py >/dev/null 2>&1; then
     echo "✅ Local logic tests passed"
 else
     echo "❌ Local logic tests failed"
@@ -64,7 +64,7 @@ fi
 
 # Run unit tests
 echo "2. Running unit tests..."
-if python certbot_dns_dynu_dev/dns_dynu_test.py > /dev/null 2>&1; then
+if python certbot_dns_dynu_dev/dns_dynu_test.py >/dev/null 2>&1; then
     echo "✅ Unit tests passed"
 else
     echo "⚠️  Unit tests had issues (may be expected)"
