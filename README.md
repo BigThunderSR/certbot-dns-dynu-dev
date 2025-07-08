@@ -49,11 +49,35 @@ dns_dynu_auth_token = AbCbASsd!@34
 
 ```bash
 # Obtain a certificate using the Dynu DNS authenticator
-certbot ... \
-        --authenticator dns-dynu  \
-        --dns-dynu-credentials ~/dynu-credentials.ini \
-        certonly
+# If certbot is in PATH:
+certbot certonly \
+    --authenticator dns-dynu \
+    --dns-dynu-credentials ~/dynu-credentials.ini \
+    -d your-domain.com
+
+# If certbot is not in PATH (e.g., installed via pip in user environment):
+python run_certbot.py certonly \
+    --authenticator dns-dynu \
+    --dns-dynu-credentials ~/dynu-credentials.ini \
+    -d your-domain.com
+
+# For subdomain certificates (the main fix provided by this plugin):
+python run_certbot.py certonly \
+    --authenticator dns-dynu \
+    --dns-dynu-credentials ~/dynu-credentials.ini \
+    -d my.domain.com \
+    -d api.my.domain.com
 ```
+
+**Note**: If you get "Command 'certbot' not found" or "No module named certbot.\_\_main\_\_", use the provided `run_certbot.py` wrapper script instead of the direct `certbot` command.
+
+### Subdomain Support
+
+This plugin specifically fixes subdomain certificate issues by implementing intelligent DNS zone fallback:
+
+- `my.domain.com` → Creates `_acme-challenge.my` in `domain.com` zone
+- `api.my.domain.com` → Creates `_acme-challenge.api.my` in `domain.com` zone
+- `domain.com` → Creates `_acme-challenge` directly in `domain.com` zone
 
 ## FAQ
 
