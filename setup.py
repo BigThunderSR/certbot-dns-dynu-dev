@@ -32,8 +32,8 @@ setup(
     long_description=long_description,
     long_description_content_type='text/markdown',
     url='https://github.com/BigThunderSR/certbot-dns-dynu-dev',
-    download_url='https://github.com/BigThunderSR/certbot-dns-dynu-dev/archive/refs/tags/'
-                + VERSION + '.tar.gz',
+    download_url=('https://github.com/BigThunderSR/certbot-dns-dynu-dev/'
+                  'archive/refs/tags/' + VERSION + '.tar.gz'),
     author="Updated by BigThunderSR; original author Bikramjeet Sing,",
     license='Apache License 2.0',
     python_requires='>=3.9',
