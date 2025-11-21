@@ -1,12 +1,13 @@
 #!/bin/bash
-# setup_venv_test_py38.sh - Script for testing with Python 3.8 (temporary workaround)
+# setup_venv_test_legacy.sh - Script for testing with Python 3.8/3.9 (EOL versions - legacy testing only)
 
 set -e # Exit on any error
 
 PROJECT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 VENV_DIR="$PROJECT_DIR/venv"
 
-echo "🐍 Setting up Python Virtual Environment for certbot-dns-dynu-dev testing (Python 3.8 compatibility)"
+echo "🐍 Setting up Python Virtual Environment for certbot-dns-dynu-dev testing (Python 3.8/3.9 legacy compatibility)"
+echo "⚠️  WARNING: Python 3.8 and 3.9 are end-of-life. This is for legacy testing only."
 echo "Project directory: $PROJECT_DIR"
 
 # Check Python version
@@ -19,9 +20,9 @@ if [ ! -f "setup.py.backup" ]; then
     cp setup.py setup.py.backup
 fi
 
-# Temporarily modify setup.py for Python 3.8 compatibility
-echo "🔧 Temporarily modifying setup.py for Python 3.8..."
-sed -i 's/python_requires=">=3.9"/python_requires=">=3.8"/' setup.py
+# Temporarily modify setup.py for Python 3.8/3.9 compatibility
+echo "🔧 Temporarily modifying setup.py for Python 3.8/3.9..."
+sed -i 's/python_requires=">=3.10"/python_requires=">=3.8"/' setup.py
 
 # Create virtual environment (check if it's properly created)
 if [ ! -f "$VENV_DIR/bin/activate" ]; then
@@ -34,7 +35,9 @@ if [ ! -f "$VENV_DIR/bin/activate" ]; then
     # Try to install python3-venv if venv creation fails
     if ! python3 -m venv "$VENV_DIR" 2>/dev/null; then
         echo "❌ Failed to create virtual environment. Trying to install python3-venv..."
-        echo "💡 You may need to run: sudo apt install python3.8-venv"
+        echo "💡 You may need to run: sudo apt install python3-venv"
+        echo "💡 For Python 3.8: sudo apt install python3.8-venv"
+        echo "💡 For Python 3.9: sudo apt install python3.9-venv"
         echo "💡 Alternative: use the simple_test.sh script without virtual environment"
         exit 1
     fi
@@ -48,7 +51,7 @@ if [ -f "$VENV_DIR/bin/activate" ]; then
     source "$VENV_DIR/bin/activate"
 else
     echo "❌ Virtual environment activation script not found"
-    echo "💡 Try running: sudo apt install python3.8-venv"
+    echo "💡 Try running: sudo apt install python3-venv (or python3.8-venv/python3.9-venv)"
     exit 1
 fi
 
@@ -92,7 +95,8 @@ fi
 echo ""
 echo "🎉 Setup complete! Virtual environment is ready for testing."
 echo ""
-echo "⚠️  WARNING: This setup modified setup.py for Python 3.8 compatibility."
+echo "⚠️  WARNING: This setup modified setup.py for Python 3.8/3.9 compatibility."
+echo "   Python 3.8 and 3.9 are END-OF-LIFE and no longer officially supported."
 echo "   The original setup.py was backed up as setup.py.backup"
 echo ""
 echo "To use this environment:"
