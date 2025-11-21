@@ -4,27 +4,31 @@ This guide provides comprehensive instructions for testing the certbot-dns-dynu-
 
 ## Prerequisites
 
-1. **Python Environment**: Python 3.9+ (the plugin requires this version)
-   - **Note**: If you only have Python 3.8, you can still test the logic, but you'll need to temporarily modify `setup.py` to allow Python 3.8 for testing
+1. **Python Environment**: Python 3.10+ (the plugin requires this version)
+   - **Note**: If you only have Python 3.8 or 3.9, you can still test the logic, but you'll need to temporarily modify `setup.py` to allow older Python versions for testing (see legacy testing section below)
 2. **Dynu Account**: Sign up at <https://www.dynu.com/> if you don't have one
 3. **Test Domain**: A domain managed by Dynu DNS
 
-### Python Version Compatibility
+### Python Version Compatibility (Legacy Testing)
 
-If you're stuck with Python 3.8 for testing, you can temporarily modify the version requirement:
+**Note**: Python 3.8 reached end-of-life in October 2024, and Python 3.9 reached end-of-life in October 2025. These versions are no longer officially supported.
+
+If you're stuck with Python 3.8 or 3.9 for testing, you can temporarily modify the version requirement:
 
 ```bash
 # Backup the original setup.py
 cp setup.py setup.py.backup
 
-# Edit setup.py to allow Python 3.8 (FOR TESTING ONLY)
-sed -i 's/python_requires=">=3.9"/python_requires=">=3.8"/' setup.py
+# Edit setup.py to allow Python 3.8 or 3.9 (FOR LEGACY TESTING ONLY)
+sed -i 's/python_requires=">=3.10"/python_requires=">=3.8"/' setup.py
+# OR for Python 3.9 only:
+sed -i 's/python_requires=">=3.10"/python_requires=">=3.9"/' setup.py
 
 # After testing, restore the original
 mv setup.py.backup setup.py
 ```
 
-**Important**: This is only for local testing. The final plugin should maintain the Python 3.9+ requirement.
+**Important**: This is only for local testing. The final plugin requires Python 3.10+ for production use.
 
 ## Setup Instructions
 
@@ -33,11 +37,11 @@ mv setup.py.backup setup.py
 For a quick automated setup, use the provided script:
 
 ```bash
-# For Python 3.9+ systems
+# For Python 3.10+ systems (current requirement)
 ./setup_venv_test.sh
 
-# For Python 3.8 systems (testing only)
-./setup_venv_test_py38.sh --test
+# For Python 3.8/3.9 systems (LEGACY TESTING ONLY - these versions are EOL)
+./setup_venv_test_legacy.sh --test
 
 # Simple system-wide testing (no venv)
 ./simple_test.sh
