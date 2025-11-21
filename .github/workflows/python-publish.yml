@@ -42,7 +42,7 @@ jobs:
     #    # Remove the explicit password input to enable Trusted Publishing
     #    PYPI_TOKEN: ${{ secrets.PYPI_API_TOKEN }}
     - name: Publish package
-      uses: pypa/gh-action-pypi-publish@d417ba7e7683fa9104c42abe611c1f2c93c0727d
+      uses: pypa/gh-action-pypi-publish@3317ede93a4981d0fc490510c6fcf8bf0e92ed05
       with:
         attestations: true
       env:
