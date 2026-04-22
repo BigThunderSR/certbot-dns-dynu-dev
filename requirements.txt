@@ -1,4 +1,4 @@
-acme>3.0.0
+acme>=5.5.0
 certbot>3.0.0
 dns-lexicon>3.0.0
 tldextract>=5.0.0
