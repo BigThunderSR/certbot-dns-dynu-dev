@@ -4,5 +4,5 @@ dns-lexicon>3.0.0
 tldextract>=5.0.0
 dnspython
 mock
-setuptools>=68.0.0
+setuptools>=82.0.1
 requests
