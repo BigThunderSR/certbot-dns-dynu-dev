@@ -1,6 +1,6 @@
 acme>3.0.0
 certbot>3.0.0
-dns-lexicon>3.0.0
+dns-lexicon>=3.23.2
 tldextract>=5.0.0
 dnspython
 mock
